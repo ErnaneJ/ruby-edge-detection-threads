@@ -1,4 +1,4 @@
-# Edge and Relief Detection in Images with Ruby Threads 🌄
+# Edge and Relief Detection in Images 🌄
 
 The field of digital image processing and analysis has made remarkable strides in the early years of the 21st century. This progress has been fueled by a fervor for research and the development of technologies applicable to various domains, including medicine, biology, industrial automation, and remote sensing.
 
