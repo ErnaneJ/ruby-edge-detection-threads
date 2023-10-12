@@ -24,7 +24,7 @@ Gx and Gy represent the masks used for edge detection in the x and y directions 
 
 ![m](./doc/m.png)
 
-## 🧮 Pseudocode for Problem Resolution
+## 🧮 Pseudocode for implementation
 
 Given a grayscale image I with dimensions M × N, we perform the following:
 
@@ -64,7 +64,7 @@ This project involves developing a Ruby program that utilizes threads to create 
 - The [main program](./src/main.rb) processes four distinct images located in the [assets folder](./assets).
 - The project's core class is [ImageProcessing](./src/models/image_processing.rb), tailored exclusively for this problem. The code contains detailed information about methods and usage.
 - The only library/gem used in this project is MiniMagick, as indicated in the Gemfile.
-- No external libraries were required, not even for implementing threads, as Ruby 3.2.0 (2022-12-25 revision a528908271) [x86_64-linux] natively includes the [Thread class](https://ruby-doc.org/core-2.5.1/Thread.html).
+- No external libraries were required for implementing threads, as Ruby 3.2.0 (2022-12-25 revision a528908271) [x86_64-linux] natively includes the [Thread class](https://ruby-doc.org/core-2.5.1/Thread.html).
 
 ## 📊 Results
 
