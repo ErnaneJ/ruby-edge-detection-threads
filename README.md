@@ -22,15 +22,17 @@ These matrices compute intensity variations in the x and y directions, allowing 
 
 Gx and Gy represent the masks used for edge detection in the x and y directions of the digital image. By applying these masks, we obtain separate edge images in both directions. The final segmented image is produced by amalgamating information from these two edge images.
 
+![m](./doc/m.png)
+
 ## 🧮 Pseudocode for Problem Resolution
 
 Given a grayscale image I with dimensions M × N, we perform the following:
 
-  - Create an image (array) M × N, Gx, with all elements initialized to 0.
-  - Create an image (array) M × N, Gy, with all elements initialized to 0.
-  - Create an image (array) M × N, G, which can initially be set with all elements equal to zero.
+  - We create an image (array) M × N, Gx, with all elements initialized to 0.
+  - We create an image (array) M × N, Gy, with all elements initialized to 0.
+  - We create an image (array) M × N, G, which can initially be set with all elements equal to zero.
 
-The pseudocode for the calculations is outlined in the code block above.
+The pseudocode for the calculations is outlined in the code block below.
 
 ```
 # Calculating edge information
