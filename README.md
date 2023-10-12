@@ -32,6 +32,27 @@ Given a grayscale image I with dimensions M × N, we perform the following:
 
 The pseudocode for the calculations is outlined in the code block above.
 
+```
+# Calculating edge information
+For i ranging from 1 to M-2
+  For j ranging from 1 to N-2
+    # Calculation of Gx...
+    Gx(i, j) = [ I(i+1, j-1) + I(i+1, j) + I(i+1, j+1) ] - [ I(i-1, j-1) + I(i-1, j) + I(i-1, j+1) ]
+    # Clamping...
+    If Gx(i, j) < 0, Gx(i, j) = 0;
+    If Gx(i, j) > 255, Gx(i, j) = 255;
+  end-for
+end-for
+
+# Generating output image...
+For i ranging from 0 to M-1
+  For j ranging from 0 to N-1
+    G(i, j) = Gx(i, j) + Gy(i, j)
+    If G(i, j) > 255, G(i, j) = 255
+  end-for
+end-for
+```
+
 ## 🛠️ Project
 
 This project involves developing a Ruby program that utilizes threads to create two threads, one for obtaining the edge image in the x-direction and the other in the y-direction from an existing image. The main thread opens the input image, represents it using a suitable array, and then spawns two threads for calculating the edge images Gx and Gy. After their tasks are complete, the parent thread reads the two resulting image arrays to calculate the output image G.
